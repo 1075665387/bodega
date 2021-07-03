@@ -1,0 +1,111 @@
+body{
+    /*background-image: linear-gradient(to right, #1B2D59,#03050A);*/
+    background-image: linear-gradient(to right, #0e328b, #0c2f7c, #0c2b6d, #0e275f, #102350, #0f2045,
+     #0f1c3b, #0f1930, #0e1527, #0b101e, #060a15, #010309);
+     
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+    left: 350px;
+    top: 20px;
+}
+
+div.center {
+    text-align: center;
+  }
+.register-left i{
+    
+    margin-bottom: 18px;
+    /*width: 80px;*/
+    font-size: 80px;
+    animation: mover 700ms infinite alternate;
+}
+.register-left p{
+    padding: 20px 20px 0;
+    font-size: 12px;
+}
+.register-left h1{
+    font-family: 'Abel', sans-serif;
+    font-weight: 500;
+}
+.register-left .btn-primary{
+    border-radius: 1.5rem;
+    border: none;
+    width: 120px;
+    background: #f8f8f8;
+    font-weight: 600;
+    color:#555;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    font-family: 'Abel', sans-serif;
+}
+.register-left .btn-primary:hover{
+    background: #95CA3E;
+}
+.register-right{
+    display: block;
+    position: relative;
+    top:20px;
+    right: -100px;
+    width: 1000px;
+    border: none;
+    background: #f8f8f8;
+    
+    padding: 10px;
+}
+
+
+  
+.register-right .btn-primary{
+    
+    border-radius: 1.5rem;
+    border: none;   
+    width: 120px;
+    
+    background: #080E1C;
+    font-weight: 600;
+    color:#fff;
+    margin-top: 10px;
+    font-size: 18px;
+    padding: 10px;
+    font-family: 'Abel', sans-serif;
+}
+.register-right .btn-primary:hover{
+    background: #95CA3E;
+    
+}
+@keyframes mover{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    
+ }
+th,td{
+    padding: 15px;
+}
+thead{
+    background-color: #246355;
+    border-bottom: solid 5px #0f362d;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover td{
+    background-color: #369681;
+    color: white;
+}

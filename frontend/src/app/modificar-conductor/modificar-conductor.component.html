@@ -1,0 +1,55 @@
+<body>
+  <div class="container" style="height: 220vh">
+      <div class="row">
+          <div class="col-md-10 offset=md-1">
+              <div class="row">
+                  <div class="col-md-5 register-left">
+                    <i class="fas fa-user-cog"></i>
+                  </div>
+                  
+                  <div class="register-right">
+                    
+                          <div class="register-form center" >
+                              <h2>Modificar Conductor</h2>
+                              <form (ngSubmit)="filtrarConductor2()" [formGroup]="filtrarCon2">
+                                <input type="text" class="form-control" placeholder="Digite el id"  formControlName="textfiltrocon2">
+                                <button type="submit" class="btn btn-primary">Buscar</button> 
+                                <a routerLink="/Inicio"><button type="button" class="btn btn-primary">Inicio </button></a> 
+                                <div class="texto" >
+                                <li *ngFor="let tido of filtrocon2">
+                                  
+                                    id tipo documento: <input [value]="tido.id_tipo_documento" type="text" class="form-control" placeholder="Tipo de Documento" formControlName="texttipodocu2">
+                                    <br>
+                                    numero documento: <input [value]="tido.numero_documento" type="text" class="form-control" placeholder="Número de Documento" formControlName="textnumerodocu2">
+                                    <br>
+                                    primer nombre: <input [value]="tido.primer_nombre" type="text" class="form-control" placeholder="Primer Nombre" formControlName="textpnombre2">
+                                    <br>
+                                    segundo nombre: <input [value]="tido.segundo_nombre" type="text" class="form-control" placeholder="Segundo Nombre" formControlName="textsnombre2">
+                                    <br>
+                                    primer apellido: <input [value]="tido.primer_apellido" type="text" class="form-control" placeholder="Primer Apellido" formControlName="textpapellido2">
+                                    <br>
+                                    segundo apellido: <input [value]="tido.segundo_apellido" type="text" class="form-control" placeholder="Segundo Apellido" formControlName="textsapellido2">
+                                    <br>
+                                    direccion: <input [value]="tido.direccion" type="text" class="form-control" placeholder="Dirección" formControlName="textdireccion2">
+                                    <br>
+                                    numero de telefono: <input [value]="tido.numero_telefono" type="text" class="form-control" placeholder="Número de Teléfono" formControlName="texttelefono2">
+                                    <br>
+                                    numero de licencia: <input [value]="tido.numero_licencia" type="text" class="form-control" placeholder="Número de Licencia" formControlName="textlicencia2">
+                                    <br>
+                                    fecha de vencimiento año-mes-dia: <input [value]="tido.fecha_venci_licencia" type="text" class="form-control" placeholder="Fecha venci Licencia año-mes-dia" formControlName="textvenci2">
+                                    <br>
+                                    Estado: <input [value]="tido.estado" type="text" class="form-control" placeholder="Estado" formControlName="textestadoC2">
+                                
+                                  <button class="btn btn-primary" (click)="modificarConductor()">Modificar </button>
+                                  </li>
+                                </div>
+                              </form>
+                          </div>
+                         
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+

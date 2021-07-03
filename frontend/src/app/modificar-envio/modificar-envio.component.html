@@ -1,0 +1,47 @@
+<body>
+  <div class="container" style="height: 120vh">
+      <div class="row">
+          <div class="col-md-10 offset=md-1">
+              <div class="row">
+                  <div class="col-md-5 register-left">
+                    <i class="fas fa-dolly"></i>
+                  </div>
+                  
+                  <div class="register-right">
+                    
+                          <div class="register-form center" >
+                              <h2>Modificar Envío</h2>
+                              <form (ngSubmit)="filtrarEnvio2()" [formGroup]="filtrarEn2">
+                                <input type="text" class="form-control" placeholder="Digite el id"  formControlName="textfiltroEn2">
+                                <button type="submit" class="btn btn-primary">Buscar</button> 
+                                <a routerLink="/Inicio"><button type="button" class="btn btn-primary">Inicio </button></a> 
+                                <div class="texto" >
+                                  <li *ngFor="let tido of filtroen2">
+                                    
+                                    Fecha Envio: <input type="text" [value]="tido.fecha_envio" class="form-control" placeholder="Fecha de Envio año-mes-dia" formControlName="textfechae2">
+                                    <br>
+                                    Destino: <input type="text" [value]="tido.destino" class="form-control" placeholder="Destino" formControlName="textdestino2">
+                                    <br>
+                                    Peso: <input type="text" [value]="tido.peso" class="form-control" placeholder="Peso" formControlName="textpesoE2">
+                                    <br>
+                                    id mercancia: <input type="text" [value]="tido.id_mercancia" class="form-control" placeholder="id mercancia" formControlName="textidmercancia2">
+                                    <br>
+                                    Id vehiculo: <input type="text" [value]="tido.id_vehiculo" class="form-control" placeholder="id vehiculo" formControlName="textidvehiculo2">
+                                    <br> 
+                                    Cantidad: <input type="text" [value]="tido.cantidad" class="form-control" placeholder="Cantidad" formControlName="textcantidad2">
+                                    <button class="btn btn-primary" (click)="modificarEnvio()">Modificar </button>
+                                      
+                                    </li>
+                                  </div>
+                              </form>
+                          </div>
+                          
+                 
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+
+

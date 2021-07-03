@@ -1,0 +1,133 @@
+<body>
+  <div class="container" style="height: 135vh">
+      <div class="row">
+          <div class="col-md-10 offset=md-1">
+              <div class="row">
+                  <div class="col-md-5 register-left">
+                      <i class="fas fa-id-card"></i>
+                      <h3>Crear Conductor </h3>
+                      <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. 
+                          Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+                      <a routerLink="/Inicio"><button type="button" class="btn btn-primary">Inicio </button></a>
+                      
+                  </div>
+                  <div class="col.col-md-7 register-right">
+                      <h2> Registrar Aquí</h2>
+                      <form #formLogin="ngForm" (ngSubmit)="crearConductor(formLogin)" 
+                          [formGroup]="GrupocrearConductor"
+                          class="needs-validation" novalidate>
+                          <div class="register-form">
+
+                             <div class="form-group">
+                                    <select   class="custom-select" formControlName="texttipodocu" required>
+                                         
+                                     <option value="" disabled selected >Seleccione un tipo de Documento</option>
+                                     <option  *ngFor="let tido of tipDoc" 
+                                                  value="{{ tido.id_tipo_documento}}">
+                                                      {{ tido.nombre_tipo_documento}}</option>
+                                    </select>
+                                        <div class="invalid-feedback">
+                                             Seleccione un tipo de Documento
+                                        </div>
+                              </div>
+                              
+                              <div class="form-group">
+                                  <input type="text" class="form-control" 
+                                         placeholder="Número de Documento" 
+                                         formControlName="textnumerodocu" required>
+                                         <div class="invalid-feedback">
+                                                Ingrese el número de documento
+                                        </div>     
+                              </div>
+      
+                              <div class="form-group">
+                                      <input type="text" class="form-control" 
+                                             placeholder="Primer Nombre" 
+                                             formControlName="textpnombre" required>
+                                             <div class="invalid-feedback">
+                                                    Ingrese el primer nombre
+                                               </div>
+                                  </div>
+      
+                              <div class="form-group">
+                                  <input type="text" class="form-control" 
+                                         placeholder="Segundo Nombre" 
+                                         formControlName="textsnombre" required>
+                                         <div class="invalid-feedback">
+                                                Ingrese el segundo nombre
+                                           </div>
+                                         
+                              </div>
+                              
+                              <div class="form-group">
+                                      <input type="text" class="form-control" 
+                                             placeholder="Primer Apellido" 
+                                             formControlName="textpapellido" required>
+                                             <div class="invalid-feedback">
+                                                    Ingrese el primer apellido
+                                               </div>
+                                  </div>
+      
+                              <div class="form-group">
+                                  <input type="text" class="form-control" 
+                                         placeholder="Segundo Apellido" 
+                                         formControlName="textsapellido" required>
+                                         <div class="invalid-feedback">
+                                                Ingrese el segundo apellido
+                                           </div>
+                              </div>  
+                              <div class="form-group">
+                                  <input type="text" class="form-control" 
+                                         placeholder="Dirección" 
+                                         formControlName="textdireccion" required>
+                                         <div class="invalid-feedback">
+                                                Ingrese la direccion
+                                           </div>
+                              </div>  
+
+                              <div class="form-group">
+                                <input type="text" class="form-control" 
+                                       placeholder="Número de Teléfono" 
+                                       formControlName="texttelefono" required>
+                                       <div class="invalid-feedback">
+                                            Ingrese el numero de telefono
+                                       </div>
+                              </div>
+
+                               <div class="form-group">
+                              <input type="text" class="form-control" 
+                                     placeholder="Número de Licencia" 
+                                     formControlName="textlicencia" required>
+                                     <div class="invalid-feedback">
+                                            Ingrese el numero de licencia
+                                       </div>
+                              </div>
+
+                              <div class="form-group">
+                            Fecha vencimiento Licencia <input type="date" class="form-control" 
+                                     
+                                     formControlName="textvenci" required>
+                                     <div class="invalid-feedback">
+                                            Ingrese la fecha de vencimiento 
+                                       </div>
+                              </div>
+
+                              <div class="form-group">
+                                  <input type="text" class="form-control" 
+                                         placeholder="Estado" 
+                                         formControlName="textestadoC" required>
+                                         <div class="invalid-feedback">
+                                                Ingrese el estado
+                                           </div>
+                              </div>
+                              
+                              <button type="submit" class="btn btn-primary">Crear</button>  
+                              <button type="reset" class="btn btn-primary">limpiar</button>   
+                          </div>  
+                      </form>  
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>

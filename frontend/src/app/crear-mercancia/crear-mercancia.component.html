@@ -1,0 +1,101 @@
+<body >
+    
+<div class="container" style="height: 130vh">
+    <div class="row">
+        <div class="col-md-10 offset=md-1">
+            <div class="row">
+                <div class="col-md-5 register-left">
+                    <i class="fas fa-archive"></i>
+                    <h1>Crear Producto </h1>
+                    <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. 
+                        Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500</p>
+                    <a routerLink="/Inicio"><button type="button" class="btn btn-primary">Inicio </button></a>
+                    
+                </div>
+                <div class="col.col-md-7 register-right">
+                    <h2> Registrar Aquí</h2>
+                    
+                    <form #formLogin="ngForm" (ngSubmit)="crearMercancia(formLogin)" 
+                           [formGroup]="crearMercancia2"
+                           id="needs-validation" 
+                           class="needs-validation" novalidate>
+                        <div class="register-form">
+                                
+                            <div class="form-group">
+                                   <select   class="custom-select" formControlName="textmarca" required>
+                                    
+                                    <option value="" disabled selected >Seleccione una Marca</option>
+                                    <option  *ngFor="let tido of marcaMercancia" 
+                                             value="{{ tido.id_marca_mercancia}}">
+                                             {{ tido.nombre_marca_mercancia}}</option>
+                                   </select>
+                                   <div class="invalid-feedback">
+                                        seleccione una Marca
+                                      </div>
+                            </div>
+
+
+                            <div class="form-group ">
+                                    
+                              <input type="text" class="form-control " 
+                                     placeholder="Código"  formControlName="textcodigo" required>
+                              <div class="invalid-feedback">
+                                       inserta un código
+                                   </div>
+                            </div>
+    
+                            <div class="form-group">
+                               <input type="text" class="form-control" 
+                                      placeholder="Nombre" formControlName="textnombre" 
+                                      required>
+                               <div class="invalid-feedback">
+                                    inserta el nombre
+                                </div>      
+                            </div>
+    
+                            <div class="form-group">
+                               <input type="text" class="form-control" 
+                                      placeholder="$Precio Compra" formControlName="textcompra" required>
+                               <div class="invalid-feedback">
+                                    inserta el precio de compra
+                                  </div>
+                            </div>
+                            
+                            <div class="form-group">
+                               <input type="text" class="form-control" 
+                                      placeholder="$Precio Venta" formControlName="textventa" required>
+                                      <div class="invalid-feedback">
+                                            inserta el precio de venta
+                                      </div>
+                            </div>
+
+    
+                            <div class="form-group">
+                               <input type="text" 
+                                      class="form-control" placeholder="Peso" 
+                                      formControlName="textpeso" required>
+                               <div class="invalid-feedback">
+                                            inserta el peso
+                                </div>      
+                            </div> 
+                            <div class="form-group">
+                               <input type="text" class="form-control" 
+                                      placeholder="Estado" formControlName="textestado" required>
+                                <div class="invalid-feedback">
+                                            inserta el estado
+                                </div>      
+                            </div> 
+
+                            <button type="submit"  class="btn btn-primary">Crear</button>  
+                            <button type="reset" class="btn btn-primary">limpiar</button> 
+
+                        </div>  
+                    </form>  
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>

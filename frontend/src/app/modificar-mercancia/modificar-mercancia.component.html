@@ -1,0 +1,49 @@
+<body>
+  <div class="container" style="height: 160vh">
+      <div class="row">
+          <div class="col-md-10 offset=md-1">
+              <div class="row">
+                  <div class="col-md-5 register-left">
+                    <i class="fas fa-box-open"></i>
+                  </div>
+                  
+                  <div class="register-right">
+                    
+                          <div class="register-form center" >
+                              <h2>Modificar Mercancía </h2>
+                              <form (ngSubmit)="filtrarMercancia2()" [formGroup]="filtrarMer2">
+                                  <input type="text" class="form-control" placeholder="Digite el id"  formControlName="textfiltro2">
+                                  <button type="submit" class="btn btn-primary">Buscar</button> 
+                                  <a routerLink="/Inicio"><button type="button" class="btn btn-primary">Inicio </button></a> 
+                                   
+                                  <div class="texto" >
+                                    <li *ngFor="let tido of filtrom2">
+                                      id marca: <input [value]="tido.id_marca_mercancia" type="text" class="form-control" placeholder="Marca" formControlName="textmarca2">
+                                      <br>
+                                      Código: <input [value]="tido.codigo_mercancia" type="text" class="form-control" placeholder="Código" formControlName="textcodigo2">
+                                      <br>
+                                      Nombre: <input [value]="tido.nombre_mercancia" type="text" class="form-control" placeholder="Nombre" formControlName="textnombre2">
+                                      <br>
+                                      Precio Compra: <input [value]="tido.precio_compra_mercancia" type="text" class="form-control" placeholder="$Precio Compra" formControlName="textcompra2">
+                                      <br>
+                                      precio Venta: <input [value]="tido.precio_venta_mercancia" type="text" class="form-control" placeholder="$Precio Venta" formControlName="textventa2">
+                                      <br>
+                                      Peso: <input [value]="tido.peso" type="text" class="form-control" placeholder="Peso" formControlName="textpeso2">
+                                      <br>
+                                      Estado: <input [value]="tido.estado" type="text" class="form-control" placeholder="Estado" formControlName="textestado2">
+                                      <button class="btn btn-primary" (click)="modificarMercancia()">Modificar </button>
+                                    </li>
+                                    
+                                  </div>
+                              </form>
+                            
+                          </div>
+                           
+                          
+                 
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>

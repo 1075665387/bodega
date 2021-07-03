@@ -1,0 +1,92 @@
+body{
+    /*background-image: linear-gradient(to right, #1B2D59,#03050A);*/
+    background-image: linear-gradient(to right top,#a8eb12, #00bf72,#008793,#004d7a, #051937);
+    
+    right: 150%;
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    padding: 30px;
+    position: relative;
+    left: 60px;
+    top: 60px;
+}
+.register-left i{
+    margin: 60px;
+    margin-bottom: 18px;
+    /*width: 80px;*/
+    font-size: 80px;
+    animation: mover 700ms infinite alternate;
+}
+.register-left p{
+    padding: 20px 20px 0;
+    font-size: 12px;
+}
+.register-left h3{
+    font-family: 'Abel', sans-serif;
+    font-weight: 500;
+}
+.register-left .btn-primary{
+    border-radius: 1.5rem;
+    border: none;
+    width: 120px;
+    background: #f8f8f8;
+    font-weight: 600;
+    color:#555;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    font-family: 'Abel', sans-serif;
+}
+.register-left .btn-primary:hover{
+    background: #95CA3E;
+}
+.register-right{
+    display: block;
+    position: relative;
+    top:40px;
+    right: -150px;
+    width: 450px;
+    border: none;
+    background: #f8f8f8;
+    border-top-left-radius: 10% 50%;
+    border-bottom-left-radius: 10% 50%;
+    padding:22px 50px;
+}
+.register-right h2{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.register-right .btn-primary{
+    float: right;
+    border-radius: 1.5rem;
+    border: none;   
+    width: 120px;
+    background: #080E1C;
+    font-weight: 600;
+    color:#fff;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    font-family: 'Abel', sans-serif;
+}
+.register-right .btn-primary:hover{
+    background: #95CA3E;
+}
+@keyframes mover{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+
+/*css para el select para que funcione el el component debe ser required*/
+select:required:invalid {
+    color: gray;
+  }
+  option[value=""][disabled] {
+    display: none;
+  }

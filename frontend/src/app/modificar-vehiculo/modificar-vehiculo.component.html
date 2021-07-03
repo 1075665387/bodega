@@ -1,0 +1,52 @@
+<body>
+  <div class="container" style="height: 190vh">
+      <div class="row">
+          <div class="col-md-10 offset=md-1">
+              <div class="row">
+                  <div class="col-md-5 register-left">
+                    <i class="fas fa-pencil-alt"></i>
+                  </div>
+                  
+                  <div class="register-right">
+                    
+                          <div class="register-form center" >
+                              <h2>Modificar Vehículo </h2>
+                              <form (ngSubmit)="filtrarVehiculo2()" [formGroup]="filtrarveh2">
+                                  <input type="text" class="form-control" placeholder="Digite el id"  formControlName="textfiltrov2">
+                                  <button type="submit" class="btn btn-primary">Buscar</button> 
+                                  <a routerLink="/Inicio"><button type="button" class="btn btn-primary">Inicio </button></a> 
+                                  <div class="texto" >
+                                    <li *ngFor="let tido of filtrov2">
+                                      
+                                    id tipo vehiculo: <input [value]="tido.id_tipo_vehiculo" type="text" class="form-control" placeholder="Tipo de Vehiculo" formControlName="texttipo2">
+                                        <br>
+                                    id marca: <input  [value]="tido.id_marca_vehiculo" type="text" class="form-control" placeholder="Marca Vehiculo" formControlName="textmarcaV2">
+                                        <br>
+                                    id color: <input [value]="tido.id_color" type="text" class="form-control" placeholder="Color" formControlName="textcolor2">
+                                        <br>
+                                    Modelo: <input [value]="tido.modelo_vehiculo" type="text" class="form-control" placeholder="Modelo" formControlName="textmodelo2">
+                                        <br>
+                                    Placa: <input [value]="tido.placa_vehiculo" type="text" class="form-control" placeholder="Placa" formControlName="textplaca2">
+                                        <br>
+                                    Capacidad: <input [value]="tido.capacidad_en_Tn" type="text" class="form-control" placeholder="Capacidad(Toneladas)" formControlName="textcapacidad2">
+                                        <br>
+                                    Id Conductor: <input  [value]="tido.id_conductor" type="text" class="form-control" placeholder="Id Conductor" formControlName="textconductor2">
+                                        <br>
+                                    Estado: <input [value]="tido.estado"type="text" class="form-control" placeholder="Estado" formControlName="textestadoV2">
+                                    
+                                        <button class="btn btn-primary" (click)="modificarVehiculo()">Modificar </button>
+                                    </li>
+                                    
+                                  </div>
+                                  
+                              </form>
+                             
+                            
+                          </div>
+                
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
